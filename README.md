@@ -46,7 +46,14 @@ composer install
 ```
 cp .env.example .env
 ```
-### 5. .envファイル修正
+
+### 5. アプリケーションキーの生成（PHPコンテナ内で入力）
+
+```
+php artisan key:generate
+```
+
+### 6. .envファイル修正
 4で作成された「.env 」を以下のように修正してください。
 
 ```
@@ -57,19 +64,19 @@ DB_DATABASE=laravel_db
 DB_USERNAME=laravel_user
 DB_PASSWORD=laravel_pass
 ```
-### 6. マイグレーション実行（PHPコンテナ内で入力）
+### 7. マイグレーション実行（PHPコンテナ内で入力）
 
 ```
 php artisan migrate
 ```
 
-### 7. シーディングの実行（PHPコンテナ内で入力）
+### 8. シーディングの実行（PHPコンテナ内で入力）
 
 ```
 php artisan db:seed
 ```
 
-### 8. ブラウザでアクセス
+### 9. ブラウザでアクセス
 
 ```
 http://localhost
